@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" comntent="IE=edge">
+    <meta name-"viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANDOMNUMBER</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        position: relative;
+        background-image : url("kookwww2000_28988055.gif");
+      }
+      .countBox {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px, 50px;
+        box-sizing: border-box;
+        background-color: black;
+        border-radius: 10px;
+        box-shadow: 1px 1px 15px white;
+        width: 100%;
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+      h1 {
+        color: white;
+        font-size: 36px;
+      }
+      button {
+        border: 360;
+        background-color: black;
+      }
+      .countNumber {
+        font-size: 68px;
+        font-weight: bold;
+        color: white;
+        margin: 10px 0;
+      }
+      .countButtonWrap > button {
+        color: black;
+        font-weight: bold;
+        border-radius: 10px;
+        background-color: white;
+        padding: 20px 50px;
+      }
+      .countButtonWrap > button:hover {
+        color: gray;
+        background-color: gray;
+        transition: all ease 0.3s
+      }
+    </style>
+  </head>
+  <body>
+    <div class="countBox">
+      <h1> 1-713 랜덤 뽑기</h1>
+      <p class="countNumber">0</p>
+      <div class="countButtonWrap">
+        <button class="generate">눌러 보세요</button>
+      </div>
+      <script>
+        let generateNum = document.querySelector(".countNumber");
+        let button = document.querySelector(".generate");
+
+        function generator() {
+          const randomNum = Math.floor(Math.random() * 713 + 1);
+          generatenum.innnerHTML = randomNum;
+        }
+
+        button.addEventListener(".Click", generator);
+        </script>
+  </body>
+</html>
